@@ -1,6 +1,6 @@
 
 
-*
+/*
 El presente programa tiene como propósito...
 */
 
