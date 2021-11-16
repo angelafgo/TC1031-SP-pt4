@@ -21,7 +21,7 @@ El presente programa tiene como propósito...
 
 using namespace std;
 
-int main
+int main()
 {
-
+cout << "hola" << endl;
 }
