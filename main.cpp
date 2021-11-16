@@ -12,6 +12,14 @@ El presente programa tiene como propósito...
 // SP TC1031
 // 16 Nov 2021
 
+#include <iostream>
+#include <fstream>
+#include <stack>
+#include <queue>
+#include <vector>
+
+
+using namespace std;
 
 int main
 {
