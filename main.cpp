@@ -10,8 +10,7 @@ y utilizando la función DFS adecuada para la situación problema.
 Lo ultimo por ingresar sea consultar 2 puertos con respecto a sus conexiones. 
 Para que la salida que se desplegará sea que por cada consulta, 
 muestra una sola línea que indica el número de caso de prueba (numerados secuencialmente desde uno), 
-el número de puertos a los cuales no se puede llegar, 
-el nombre del puerto inicial y el valor inicial de numero de conexiones.
+el número de puertos a los cuales no se puede llegar, y el nombre del puerto inicial, asi como el valor inicial de numero de conexiones.
 */
 
 // Integrantes (Equipo 12) :
