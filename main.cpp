@@ -1,7 +1,17 @@
 // Borrador de programa
 
 /*
-El presente programa tiene como propósito...
+El presente programa tiene como propósito hacer la implementación de grafos, 
+con la oportunidad de tener distintas formas para llegar al resultado deseado, en este caso se hizo el uso de mapas "#include <unordered_map>,
+para que al momento de ingresar primero el número de Puertos y después el número de conexiones, consecutivamente ingresar los nombres de los puertos y por ende las conexiones que tienen entre sí,
+de la cual usando la función "void loadGraph()"  Se crea un mapa sin orden que guarda datos con el nombre del puerto y el indice basado en el orden en que entran, 
+para que con ello se tenga el índice del puerto más adelante y guardarlo en la lista de adyacencias,
+y utilizando la función DFS adecuada para la situación problema.
+Lo ultimo por ingresar sea consultar 2 puertos con respecto a sus conexiones. 
+Para que la salida que se desplegará sea que por cada consulta, 
+muestra una sola línea que indica el número de caso de prueba (numerados secuencialmente desde uno), 
+el número de puertos a los cuales no se puede llegar, 
+el nombre del puerto inicial y el valor inicial de numero de conexiones.
 */
 
 // Integrantes (Equipo 12) :
@@ -21,6 +31,7 @@ El presente programa tiene como propósito...
 
 using namespace std;
 
+// Complejidad: 
 void loadGraph(int n,int m, unordered_map<string,int> & mapaPuertos, vector<vector<int>> & listAdj){
     // Se crea un mapa sin orden que guarda datos con el nombre del puerto y el indice basado en el orden en que entran
     // Esto se hizo para poder obtener el índice del puerto más adelante y guardarlo en la lista de adyacencias
