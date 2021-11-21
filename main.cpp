@@ -1,5 +1,3 @@
-// Borrador de programa
-
 /*
 El presente programa tiene como propósito hacer la implementación de grafos, 
 con la oportunidad de tener distintas formas para llegar al resultado deseado, en este caso se hizo el uso de mapas "#include <unordered_map>,
@@ -24,13 +22,12 @@ el número de puertos a los cuales no se puede llegar, y el nombre del puerto in
 #include <iostream>
 #include <fstream>
 #include <stack>
-#include <queue>
 #include <vector>
 #include <unordered_map>
 
 using namespace std;
 
-// Complejidad: 
+// Complejidad: O(n)
 void loadGraph(int n,int m, unordered_map<string,int> & mapaPuertos, vector<vector<int>> & listAdj){
     // Se crea un mapa sin orden que guarda datos con el nombre del puerto y el indice basado en el orden en que entran
     // Esto se hizo para poder obtener el índice del puerto más adelante y guardarlo en la lista de adyacencias
@@ -122,3 +119,112 @@ int main() {
 
     return 0;
 }
+
+/*
+    Prueba 1:
+
+    13 16
+    Haikou    
+    Yantai    
+    Fuzhou    
+    Alejandria
+    Balboa    
+    Busan     
+    Taipei    
+    Karachi   
+    London    
+    Ambarli   
+    Zhuhai    
+    Singapore 
+    Merin     
+
+    Haikou Yantai
+    Haikou Balboa
+    Yantai Busan
+    Yantai Fuzhou
+    Busan Taipei
+    Fuzhou Taipei
+    Fuzhou Alejandria
+    Alejandria Karachi
+    Karachi London
+    London Ambarli
+    Ambarli Zhuhai
+    Zhuhai Taipei
+    Zhuhai Singapore
+    Singapore Busan
+    Singapore Merin
+    Merin Balboa
+
+    2
+    Ambarli 2
+    Case 1: 7 ports not reachable from port Ambarli with MNP = 2
+    Busan 2
+    Case 2: 5 ports not reachable from port Busan with MNP = 2
+    -------------------------------------------------------------
+
+    Prueba 2:
+
+    10 9
+	Biblio
+	Cedes
+	Ciap
+	Canchas
+	Aulas1
+	Aulas2
+	Aulas3
+	Aulas4
+	E1
+	E6
+	
+	Biblio Aulas1
+	Biblio Aulas3
+	Aulas1 E6
+	Aulas1 Aulas2
+	Aulas2 Ciap
+	Ciap Cedes
+	Cedes Canchas
+	Aulas3 Aulas4
+	Aulas4 E1
+
+    2
+    Biblio 2
+    Case 1: 4 ports not reachable from port Biblio with MNP = 2
+    Ciap 3
+    Case 2: 3 ports not reachable from port Ciap with MNP = 3
+    -------------------------------------------------------------
+
+
+    Prueba 3:
+
+    10 11
+	Biblio
+	Cedes
+	Ciap
+	Canchas
+	Aulas1
+	Aulas2
+	Aulas3
+	Aulas4
+	E1
+	E6
+	
+	Biblio Aulas1
+	Biblio Aulas3
+	Aulas1 E6
+	Aulas1 Aulas2
+	Aulas2 Ciap
+	Ciap Cedes
+	Cedes Canchas
+	Aulas3 Aulas4
+	Aulas4 E1
+	E6 E1
+	E6 Canchas
+
+    2
+    Biblio 4
+    Case 1: 0 ports not reachable from port Biblio with MNP = 4
+    Ciap 3
+    Case 2: 3 ports not reachable from port Ciap with MNP = 3
+    -------------------------------------------------------------
+
+*/
